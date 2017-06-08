@@ -79,6 +79,10 @@ public class Team implements Comparable<Team>{
 	public int compareTo(Team altro) {
 		return this.punti-altro.punti;
 	}
+
+	public int compare(Team ultimo) {
+		return this.getTeam().compareTo(ultimo.getTeam());
+	}
 	
 	
 	

@@ -9,7 +9,8 @@ public class testModel {
 		Model m =new Model() ;
 		List<Season> stagioni =m.setStagioni();
 		m.caricaPartite(stagioni.get(0));
-		System.out.println(m.getGrafo());
+		//System.out.println(m.getGrafo());
+		System.out.println(m.trovaCammino());
 
 	}
 

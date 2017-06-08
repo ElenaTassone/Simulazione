@@ -42,18 +42,24 @@ public class SerieAController {
     
     @FXML
     void handleCarica(ActionEvent event) {
-    	
     	Season s = boxSeason.getValue() ;
+    	if(s==null)
+    		txtResult.appendText("Selezionare una stagione");
     	model.caricaPartite(s);
     	txtResult.clear();
-    	txtResult.setText(model.getClassifica().toString());
+    	txtResult.setText(model.getClassifica());
     	
 
     }
 
     @FXML
     void handleDomino(ActionEvent event) {
-
+    	Season s = boxSeason.getValue() ;
+    	if(s==null)
+    		txtResult.appendText("Selezionare una stagione");
+    	model.caricaPartite(s);
+    	txtResult.clear();
+    	txtResult.setText(model.trovaCammino());    	
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
